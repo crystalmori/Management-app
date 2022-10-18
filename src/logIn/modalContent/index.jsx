@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 import Modal from "../../modal/index";
 import "../../content/index";
 import { FORM } from "../../content/index";

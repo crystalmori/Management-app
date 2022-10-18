@@ -1,4 +1,5 @@
-import { Modal } from "react-bootstrap";
+import { Modal, Form } from "react-bootstrap";
+import { useState, Button } from "react";
 
 const MyModal = ({ headerText, handleAction }) => {
   const [show, setShow] = useState(true);
@@ -42,7 +43,9 @@ const MyModal = ({ headerText, handleAction }) => {
           variant="primary"
           onClick={handleAction}
         >
-          {footerButtonContent}
+          <p>
+            Don't have an account? <a onClick={() => {}}>Sign up</a>
+          </p>
         </Button>
       </Modal.Footer>
     </Modal>
