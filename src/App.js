@@ -1,15 +1,18 @@
 import "./App.css";
 
 import SignInModal from "./components/SignInModal";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import LogIn from "./logIn/modalContent";
 
 function App() {
   // const [show, setShow] = useState(false);
   return (
     <div className="App">
-      {/* <button onClick={() => setShow(true)}>Show Modal</button> */}
-      {/* <SignIn /> */}
-      {/* <Modal show={show} /> */}
-      <SignInModal />
+      <Header />
+      {/* <SignInModal /> */}
+      <LogIn />
+      <Footer />
     </div>
   );
 }

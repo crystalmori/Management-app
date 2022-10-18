@@ -4,21 +4,20 @@ import { Button, Form, Modal } from "react-bootstrap";
 import "../styles/modal.css";
 
 const SignInModal = () => {
-  const [show, setShow] = useState(false);
+  const [show, setShow] = useState(true);
   const [emailInput, setEmailInput] = useState("");
   const [passwordInput, setPasswordInput] = useState("");
+  const [showSignUp, setShowSignUp] = useState(false);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   const handleSignIn = () => {
-    const obj = {
-      email: emailInput,
-      password: passwordInput,
-    };
-    console.log(obj);
-
     setEmailInput("");
     setPasswordInput("");
+  };
+  const handleSignUp = () => {
+    setShow(false);
+    setShowSignUp(true);
   };
 
   return (
@@ -62,6 +61,9 @@ const SignInModal = () => {
           >
             Sign In
           </Button>
+          <p>
+            Don't have an account? <a onClick={() => {}}>Sign up</a>
+          </p>
         </Modal.Footer>
       </Modal>
     </>
