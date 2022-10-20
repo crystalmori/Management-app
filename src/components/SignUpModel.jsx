@@ -3,7 +3,7 @@ import { Button, Form, Modal } from "react-bootstrap";
 
 import "../styles/modal.css";
 
-const SignInModal = () => {
+const SignUpModal = () => {
   const [show, setShow] = useState(true);
   const [emailInput, setEmailInput] = useState("");
   const [passwordInput, setPasswordInput] = useState("");
@@ -22,6 +22,10 @@ const SignInModal = () => {
 
   return (
     <>
+      <Button variant="primary" onClick={handleShow}>
+        Click
+      </Button>
+
       <Modal show={show} onHide={handleClose}>
         <Modal.Header className="modal-header" closeButton>
           <Modal.Title>Sign in to your account</Modal.Title>
@@ -67,4 +71,4 @@ const SignInModal = () => {
   );
 };
 
-export default SignInModal;
+export default SignUpModal;

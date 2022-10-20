@@ -4,7 +4,7 @@ import Modal from "../../modal/index";
 import "../../content/index";
 import { FORM } from "../../content/index";
 
-const LogIn = () => {
+const LogIn = ({ setEmailInput, setPasswordInput }) => {
   const [show, setShow] = useState(true);
 
   const handleClose = () => setShow(false);
